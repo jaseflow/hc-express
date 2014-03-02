@@ -11,43 +11,58 @@ html(lang="en")
     script(src="/js/frontend.js")
   body
 
-    .container
+    .wrapper
       h2.title
-        a(href="#") jaseflow
+        a(href="/user") jaseflow
         |  favourite 
-        strong Outkast 
-        | tracks 
+        strong Oxymoron
+        |  tracks
       .list(id="list")
         .list__content
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo, saepe, ut, voluptatibus praesentium sequi culpa necessitatibus nihil debitis esse dolorem molestias laborum omnis! Minima, eius explicabo optio laborum consequuntur.
+          .widget(id="player")
+            .widget__body
+              .widget__cover(style="background-image: url(http://cdn.hiphopdx.com/images/schoolboy-q-oxymoron-deluxecover.jpg)")
+              .widget__content
+                .product
+                  .product__thumb(style="background-image: url(http://cdn.hiphopdx.com/images/schoolboy-q-oxymoron-deluxecover.jpg)")
+                  .product__content
+                    .product__subtitle Schoolboy Q
+                    .product__title Break The Bank
+                  .product__action
+                    i.fa.fa-shopping-cart.product__cart
+                    | Buy
+            .widget__footer
+              .scrubber
+                .scrubber__bar
+                  .scrubber__control
         .list__items
           .item(data-ext="--first")
             .item__count 1
-            .item__thumb(style="background-image: url(http://www.theawl.com/wp-content/uploads/2011/10/stankonia.jpg)")
+            //- .item__thumb(style="background-image: url(http://www.theawl.com/wp-content/uploads/2011/10/stankonia.jpg)")
             .item__body
-              h3.item__title So fresh so clean
-              h4.item__subtitle Stankonia
+              h3.item__title Break The Bank
+              //- h4.item__subtitle Stankonia
           .item(data-ext="--second")
             .item__count 2
-            .item__thumb(style="background-image: url(http://according2hiphop.com/wp-content/uploads/2012/02/album-aquemini.jpg)")
+            //- .item__thumb(style="background-image: url(http://according2hiphop.com/wp-content/uploads/2012/02/album-aquemini.jpg)")
             .item__body
-              h3.item__title Synthesizer
-              h4.item__subtitle Aquemini
+              h3.item__title Blind Threats
+              //- h4.item__subtitle Aquemini
           .item(data-ext="--third")
             .item__count 3
-            .item__thumb(style="background-image: url(http://www.xxlmag.com/wp-content/uploads/2013/09/61s0JZKGbeL.jpg)")
+            //- .item__thumb(style="background-image: url(http://www.xxlmag.com/wp-content/uploads/2013/09/61s0JZKGbeL.jpg)")
             .item__body
-              h3.item__title Prototype
-              h4.item__subtitle Aquemini
+              h3.item__title The Purge
+              //- h4.item__subtitle Aquemini
           .item(data-ext="--fourth")
             .item__count 4
-            .item__thumb(style="background-image: url(http://raphappily.files.wordpress.com/2012/03/cover1.jpg)")
+            //- .item__thumb(style="background-image: url(http://raphappily.files.wordpress.com/2012/03/cover1.jpg)")
             .item__body
-              h3.item__title Two Dope Boyz (In a cadillac)
-              h4.item__subtitle ATLiens
+              h3.item__title Los Awesome
+              //- h4.item__subtitle ATLiens
           .item(data-ext="--fifth")
             .item__count 5
-            .item__thumb(style="background-image: url(http://according2hiphop.com/wp-content/uploads/2012/02/album-aquemini.jpg)")
+            //- .item__thumb(style="background-image: url(http://according2hiphop.com/wp-content/uploads/2012/02/album-aquemini.jpg)")
             .item__body
-              h3.item__title Return of the 'G'
-              h4.item__subtitle Aquemini
+              h3.item__title What They Want
+              //- h4.item__subtitle Aquemini

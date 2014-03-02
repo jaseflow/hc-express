@@ -30,5 +30,9 @@ app.get('/list', function(req, res){
   res.render('list.jade');
 });
 
+app.get('/user', function(req, res){
+  res.render('user.jade');
+});
+
 app.listen(8000);
 console.log('Express app started on port %d', 8000);
