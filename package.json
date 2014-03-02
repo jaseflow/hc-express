@@ -1,0 +1,9 @@
+{
+  "name": "Hipcharts",
+  "description": "List building music app",
+  "dependencies": {
+    "express": "3.x",
+    "jade": "*",
+    "stylus": "*"
+  }
+}
