@@ -1,0 +1,58 @@
+
+html(lang="en")
+  head
+    title Hipcharts
+    meta(charset="utf-8")
+    meta(name="apple-mobile-web-app-capable",content="yes")
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no")
+    link(rel="stylesheet",href="/css/font-awesome.min.css")
+    link(rel="stylesheet",href="/css/styles.css")
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
+    script(src="/js/frontend.js")
+  body
+
+    .wrapper
+      h2.title jaseflow has 8 charts
+      .charts
+        a.chart(href="/list")
+        a.chart(href="/list")
+        a.chart(href="/list")
+        a.chart(href="/list")
+        a.chart(href="/list")
+        a.chart(href="/list")
+        a.chart(href="/list")
+        a.chart(href="/list")
+      //- .list(id="list")
+        .list__content
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo, saepe, ut, voluptatibus praesentium sequi culpa necessitatibus nihil debitis esse dolorem molestias laborum omnis! Minima, eius explicabo optio laborum consequuntur.
+        .list__items
+          .item(data-ext="--first")
+            .item__count 1
+            .item__thumb(style="background-image: url(http://www.theawl.com/wp-content/uploads/2011/10/stankonia.jpg)")
+            .item__body
+              h3.item__title So fresh so clean
+              h4.item__subtitle Stankonia
+          .item(data-ext="--second")
+            .item__count 2
+            .item__thumb(style="background-image: url(http://according2hiphop.com/wp-content/uploads/2012/02/album-aquemini.jpg)")
+            .item__body
+              h3.item__title Synthesizer
+              h4.item__subtitle Aquemini
+          .item(data-ext="--third")
+            .item__count 3
+            .item__thumb(style="background-image: url(http://www.xxlmag.com/wp-content/uploads/2013/09/61s0JZKGbeL.jpg)")
+            .item__body
+              h3.item__title Prototype
+              h4.item__subtitle Aquemini
+          .item(data-ext="--fourth")
+            .item__count 4
+            .item__thumb(style="background-image: url(http://raphappily.files.wordpress.com/2012/03/cover1.jpg)")
+            .item__body
+              h3.item__title Two Dope Boyz (In a cadillac)
+              h4.item__subtitle ATLiens
+          .item(data-ext="--fifth")
+            .item__count 5
+            .item__thumb(style="background-image: url(http://according2hiphop.com/wp-content/uploads/2012/02/album-aquemini.jpg)")
+            .item__body
+              h3.item__title Return of the 'G'
+              h4.item__subtitle Aquemini

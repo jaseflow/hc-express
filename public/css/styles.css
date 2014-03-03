@@ -28,12 +28,32 @@ body {
 }
 
 a {
-  color: #999;
+  color: inherit;
   text-decoration: none
 }
 
 a:hover {
   text-decoration: underline
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.btn {
+  border-radius: 2px;
+  border: 0;
+  background: #eee;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn i {
+  margin-right: 5px;
 }
 
 .wrapper {
@@ -43,35 +63,132 @@ a:hover {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 15px;
+  /*padding: 15px;*/
 }
 
-.title {
-  margin-bottom: 15px;
+.container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.header {
+  height: 50px;
   font-weight: normal;
+  background: rgb(45, 115, 223);
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+.user-btn {
+  height: 100%;
+  line-height: 50px;
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+.user-btn i {
+  margin-right: 5px;
+}
+
+.close-icon {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  font-size: 18px;
+  position: relative;
+}
+
+.close-icon:hover {
+  text-decoration: none;
+}
+
+.tooltip {
+  position: absolute;
+  height: 44px;
+  background-color: #254576;
+  line-height: 44px;
+  padding: 0 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  width: 140px;
+  text-align: center;
+  display: none;
+}
+
+.tooltip:before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: calc(50% - 5px);
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: transparent #254576 transparent transparent;
+}
+
+.tooltip--right {
+  left: calc(100% + 10px);
+  top: calc(50% - 22px);
+}
+
+.tooltip--right:before {
+  border-width: 5px 6px 5px 0;
 }
 
 .list {
-  width: 95%;
   position: relative;
   margin: 0 auto;
-  max-width: 420px;
-  max-height: 500px;
-  height: 100vh;
+  max-height: 600px;
+  height: calc(100% - 50px);
   background-color: #333;
   overflow: hidden;
 }
 
-.list__content {
+.title {
+  font-size: 16px;
+  color: inherit;
+  text-align: center;
+  flex: 1;
+}
+
+.title strong {
+  font-weight: bold;
+}
+
+.content {
   height: 100%;
   width: 100%;
-  padding: 15px;
   color: #bbb;
-  padding-top: calc(20% + 30px);
+  padding-top: 100px;
   position: absolute;
+  top: -100%;
   opacity: 0;
-  -webkit-transform: scale(0.95);
-  -webkit-transition: all 0.2s ease;
+  display: flex;
+  flex-flow: column;
+  -webkit-transition: opacity 0.5s ease;
+}
+
+.content__body {
+  padding: 15px;
+  flex: 1;
+}
+
+.content__footer {
+  background-color: rgba(0,0,0,0.2);
+  padding: 10px 15px;
+  text-align: right;
 }
 
 .list__items {
@@ -99,7 +216,7 @@ a:hover {
   font-family: 'FontAwesome';
   content: "\f067";
   display: block;
-  font-size: 14px;
+  font-size: 20px;
   color: #ddd;
   -webkit-transition: all 0.25s ease;
 }
@@ -137,13 +254,13 @@ a:hover {
   top: 80%;
 }
 
-.list--first .list__content,
-.list--second .list__content,
-.list--third .list__content,
-.list--fourth .list__content,
-.list--fifth .list__content {
+.list--first .content,
+.list--second .content,
+.list--third .content,
+.list--fourth .content,
+.list--fifth .content {
+  -webkit-transform: translateY(100%);
   opacity: 1;
-  -webkit-transform: scale(1);
 }
 
 /* First one */
@@ -201,7 +318,7 @@ a:hover {
 }
 
 .item__count {
-  width: 50px;
+  width: 15%;
   text-align: center;
   font-size: 32px;
   color: #999;
@@ -234,7 +351,7 @@ a:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
 }
 
@@ -257,12 +374,7 @@ a:hover {
   margin-bottom: 15px;
 }
 
-.widget {
-  margin-bottom: 15px;
-}
-
 .widget__body {
-  height: 200px;
   display: flex;
   align-items: flex-end;
   background-color: #000;
@@ -312,6 +424,10 @@ a:hover {
 
 .product__subtitle {
   font-size: 12px;
+}
+
+.product__action a {
+  color: #fff;
 }
 
 .product__cart {
@@ -376,6 +492,14 @@ a:hover {
 
   .chart {
     flex-basis: 240px;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .close-icon:hover .tooltip{
+    display: block;
   }
 
 }
