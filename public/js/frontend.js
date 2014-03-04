@@ -1,12 +1,14 @@
 
 var list,
-    player;
+    player,
+    playerControl;
 
 
 $(function() {
 
   list = $('#list');
   player = $('#player')
+  playerControl = $('#player-control')
 
   $('.item').click(function() {
     var ext = $(this).data('ext'),
@@ -16,8 +18,8 @@ $(function() {
     list.toggleClass(el + ext)
   });
 
-  $('.scrubber__control').click(function() {
-    player.toggleClass('widget--playing');
+  $('.widget__control').click(function() {
+    playerControl.toggleClass('widget__control--playing');
   });
 
 

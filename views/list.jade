@@ -11,42 +11,26 @@ html(lang="en")
     script(src="/js/frontend.js")
   body
 
+    include header
+    h2.header__title Schoolboy Q - Oxymoron
     .wrapper
       .container
-        .header
-          a(href="/user").user-btn
-            i.fa.fa-user
-            | jaseflow
-          h2.title Top 5 Oxymoron tracks
-          a(href="/user").close-icon
-            i.fa.fa-th
-            .tooltip.tooltip--right See all charts
         .list(id="list")
           .content
             header.content__header
               .widget(id="player")
-                .widget__body
-                  .widget__cover(style="background-image: url(http://cdn.hiphopdx.com/images/schoolboy-q-oxymoron-deluxecover.jpg)")
-                  .widget__content
-                    .product
-                      .product__thumb(style="background-image: url(http://cdn.hiphopdx.com/images/schoolboy-q-oxymoron-deluxecover.jpg)")
-                      .product__content
-                        .product__subtitle Schoolboy Q
-                        .product__title Break The Bank
-                      .product__action
-                        a(href="#")
-                          i.fa.fa-shopping-cart.product__cart
-                          | Buy
-                .widget__footer
-                  .scrubber
-                    .scrubber__bar
-                      .scrubber__control
-            article.content__body
-              p Schoolboy Q comes through with some 50-esque style hooks, proves that he can switch up his flow and add a bit of harmony to his tracks. I play this very loudly in the car.
-            footer.content__footer
-              button.btn(href="#",id="cosign")
-                i.fa.fa-thumbs-up
-                |  Cosign
+                .widget__cover(style="background-image: url(http://cdn.hiphopdx.com/images/schoolboy-q-oxymoron-deluxecover.jpg)")
+                .widget__control(id="player-control")
+                .widget__content
+                  .product
+                    .product__thumb(style="background-image: url(http://cdn.hiphopdx.com/images/schoolboy-q-oxymoron-deluxecover.jpg)")
+                    .product__content
+                      .product__subtitle Schoolboy Q
+                      .product__title Break The Bank
+                    .product__action
+                      a(href="#")
+                        i.fa.fa-shopping-cart.product__cart
+                        | Buy
           .list__items
             .item(data-ext="--first")
               .item__count 1
