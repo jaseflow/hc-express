@@ -73,11 +73,30 @@ p {
 .header {
   height: 50px;
   font-weight: normal;
-  background: rgb(45, 115, 223);
+  background: linear-gradient( #048ce6, #089afb);
   display: flex;
   align-items: center;
   justify-content: flex-start;
   color: #fff;
+}
+
+.logo {
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo__icon {
+  width: 30px;
+  height: 30px;
+  background-image: url(/images/H.svg);
+  background-size: cover;
+}
+
+.logo__title {
+  font-size: 18px;
+  margin-left: 5px;
 }
 
 .user-btn {
@@ -85,7 +104,6 @@ p {
   line-height: 50px;
   font-size: 24px;
   flex: 1;
-  margin-left: -50px;
   text-align: center;
 }
 
@@ -159,7 +177,7 @@ p {
 .header__title {
   color: inherit;
   text-align: center;
-  background: rgb(42, 63, 95);
+  background: rgb(74, 74, 74);
   color: #FFFFFF;
   padding: 15px 0;
   text-transform: uppercase;
