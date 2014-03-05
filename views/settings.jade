@@ -1,0 +1,17 @@
+
+html(lang="en")
+  include head
+  body
+    include header
+    .wrapper
+      h1 Edit your settings  
+      form
+        label Email address
+        input(type=text)
+        label Username
+        input(type=text)
+        label Password
+        input(type=text)
+      .actions
+        a.btn.btn--primary(href="/u/username") Save settings
+        a.btn(href="/u/username") Logout

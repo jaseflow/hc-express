@@ -27,8 +27,19 @@ body {
   background-color: #D9D9D9;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 24px;
+}
+
+form {
+  margin-bottom: 24px;
+}
+
 a {
-  color: inherit;
+  color: rgb(46, 149, 203);
   text-decoration: none
 }
 
@@ -41,15 +52,27 @@ p {
 }
 
 .btn {
+  display: inline-block;
   border-radius: 2px;
   border: 0;
-  background: #eee;
+  background: #fff;
+  color: rgb(46, 149, 203);
+  border-bottom: 1px solid rgba(0,0,0,0.5);
   padding: 8px 20px;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+}
+
+.btn--primary {
+  background-color: rgb(46, 149, 203);
+  color: #fff;
+}
+
+.btn:hover {
+  text-decoration: none;
 }
 
 .btn i {
@@ -70,19 +93,28 @@ p {
   max-width: 420px;
 }
 
+.actions {
+  display: flex;
+}
+
+.actions a {
+  margin: 0 10px;
+}
+
 .header {
   height: 50px;
+  padding: 0 10px;
   font-weight: normal;
   background: linear-gradient( #048ce6, #089afb);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   color: #fff;
+  position: relative;
 }
 
 .logo {
   display: flex;
-  padding-left: 10px;
   align-items: center;
   cursor: pointer;
 }
@@ -97,18 +129,12 @@ p {
 .logo__title {
   font-size: 18px;
   margin-left: 5px;
+  margin-bottom: 0;
+  color: #fff;
 }
 
-.user-btn {
-  height: 100%;
-  line-height: 50px;
-  font-size: 24px;
-  flex: 1;
-  text-align: center;
-}
-
-.user-btn i {
-  margin-right: 5px;
+.user {
+  color: #fff;
 }
 
 .close-icon {
@@ -352,6 +378,10 @@ p {
   margin-right: 15px;
 }
 
+.item__title {
+  margin-bottom: 0;
+}
+
 .item__thumb {
   width: 80px;
   height: 80px;
@@ -398,6 +428,7 @@ p {
   background-position: center;
   background-size: cover;
   box-shadow: 0 1px 0 rgba(0,0,0,0.4);
+  color: #555;
 }
 
 .chart__footer {

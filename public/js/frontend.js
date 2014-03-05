@@ -3,7 +3,6 @@ var list,
     player,
     playerControl;
 
-
 $(function() {
 
   list = $('#list');

@@ -23,16 +23,41 @@ return stylus(str)
 }
 
 app.get('/', function(req, res){
-  res.render('index.jade');
+  res.render('landing.jade');
 });
 
 app.get('/list', function(req, res){
   res.render('list.jade');
 });
 
-app.get('/user', function(req, res){
-  res.render('user.jade');
+app.get('/u/username', function(req, res){
+  res.render('charts.jade');
 });
+
+app.get('/u/username/chart', function(req, res){
+  res.render('chart.jade');
+});
+
+app.get('/register', function(req, res){
+  res.render('register.jade');
+});
+
+app.get('/login', function(req, res){
+  res.render('login.jade');
+});
+
+app.get('/build', function(req, res){
+  res.render('builder-options.jade');
+});
+
+app.get('/build/chart', function(req, res){
+  res.render('builder-tool.jade');
+});
+
+app.get('/u/username/settings', function(req, res){
+  res.render('settings.jade');
+});
+
 
 app.listen(8000);
 console.log('Express app started on port %d', 8000);
