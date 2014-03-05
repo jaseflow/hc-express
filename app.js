@@ -1,7 +1,5 @@
 var express = require('express'),
-    jade = require('jade'),
-    nib = require('nib'),
-    stylus = require('stylus');
+    jade = require('jade');
 
 var app = express();
 
@@ -15,12 +13,6 @@ app.use(app.router);
 app.use(express.static('public'));
 app.use(express.errorHandler());
 app.use(express.favicon("public/images/favicon.ico"));
-
-function compile(str, path) {
-return stylus(str)
-  .set('filename', path)
-  .use(nib())
-}
 
 app.get('/', function(req, res){
   res.render('index.jade');

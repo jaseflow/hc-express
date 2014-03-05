@@ -57,12 +57,10 @@ p {
 }
 
 .wrapper {
-  min-height: calc(100% - 98px);
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 30px;
 }
 
 .container {
@@ -169,7 +167,7 @@ p {
   position: relative;
   margin: 0 auto;
   max-height: 600px;
-  height: calc(100% - 50px);
+  height: calc(100% - 98px);
   background-color: #333;
   overflow: hidden;
 }
